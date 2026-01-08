@@ -1,0 +1,160 @@
+{
+  "name": "wx-basics",
+  "displayName": "wx-basics",
+  "description": "微信小程序开发基础支持",
+  "version": "2.0.0",
+  "publisher": "ftzahao",
+  "engines": {
+    "vscode": "^1.40.0"
+  },
+  "repository": "https://github.com/ftzahao/wx-basics",
+  "scripts": {
+    "build": "vsce package"
+  },
+  "categories": [
+    "Snippets",
+    "Programming Languages"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.js.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.ts.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/snippets.json.json"
+      }
+    ],
+    "jsonValidation": [
+      {
+        "fileMatch": "package.json",
+        "url": "https://json.schemastore.org/package"
+      },
+      {
+        "fileMatch": "bower.json",
+        "url": "https://json.schemastore.org/bower"
+      },
+      {
+        "fileMatch": "app.json",
+        "url": "https://dldir1.qq.com/WechatWebDev/editor-extension/wx-json/app.schema.json"
+      },
+      {
+        "fileMatch": "ext.json",
+        "url": "https://dldir1.qq.com/WechatWebDev/editor-extension/wx-json/ext.schema.json"
+      },
+      {
+        "fileMatch": "game.json",
+        "url": "https://dldir1.qq.com/WechatWebDev/editor-extension/wx-json/game.schema.json"
+      },
+      {
+        "fileMatch": "plugin.json",
+        "url": "https://dldir1.qq.com/WechatWebDev/editor-extension/wx-json/plugin.schema.json"
+      },
+      {
+        "fileMatch": "project.config.json",
+        "url": "https://dldir1.qq.com/WechatWebDev/editor-extension/wx-json/project.config.schema.json"
+      },
+      {
+        "fileMatch": "project.private.config.json",
+        "url": "https://dldir1.qq.com/WechatWebDev/editor-extension/wx-json/project.private.config.schema.json"
+      },
+      {
+        "fileMatch": "sitemap.json",
+        "url": "https://dldir1.qq.com/WechatWebDev/editor-extension/wx-json/sitemap.schema.json"
+      },
+      {
+        "fileMatch": "container.config.json",
+        "url": "https://dldir1.qq.com/WechatWebDev/editor-extension/wx-json/container.config.schema.json"
+      },
+      {
+        "fileMatch": "theme.json",
+        "url": "https://dldir1.qq.com/WechatWebDev/editor-extension/wx-json/theme.schema.json"
+      },
+      {
+        "fileMatch": [
+          "*.json",
+          "!/settings.json",
+          "!/config.json",
+          "!/app.json",
+          "!/ext.json",
+          "!/game.json",
+          "!/plugin.json",
+          "!/project.config.json",
+          "!/sitemap.json",
+          "!/container.config.json",
+          "!/.eslintrc.*",
+          "!project.private.config.json",
+          "!/theme.json"
+        ],
+        "url": "https://dldir1.qq.com/WechatWebDev/plugins/editor/wechat-miniprogram_wx-json/1.0.0/page_component.schema.json"
+      }
+    ],
+    "languages": [
+      {
+        "id": "wxml",
+        "extensions": [
+          ".wxml"
+        ],
+        "aliases": [
+          "WXML",
+          "wxml"
+        ],
+        "configuration": "./wxml.language-configuration.json"
+      },
+      {
+        "id": "javascript",
+        "aliases": [
+          "JavaScript",
+          "javascript",
+          "js"
+        ],
+        "extensions": [
+          ".wxs"
+        ]
+      },
+      {
+        "id": "css",
+        "aliases": [
+          "CSS"
+        ],
+        "extensions": [
+          ".wxss"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "scopeName": "text.html.basic",
+        "path": "./syntaxes/wxml.tmLanguage.json",
+        "embeddedLanguages": {
+          "text.html": "html",
+          "source.js": "javascript"
+        },
+        "tokenTypes": {
+          "meta.tag string.quoted": "other"
+        }
+      },
+      {
+        "language": "wxml",
+        "scopeName": "text.html.derivative",
+        "path": "./syntaxes/wxml-derivative.tmLanguage.json",
+        "embeddedLanguages": {
+          "text.html": "html",
+          "source.js": "javascript"
+        },
+        "tokenTypes": {
+          "meta.tag string.quoted": "other"
+        }
+      }
+    ]
+  },
+  "activationEvents": [
+    "onLanguage:javascript"
+  ],
+  "main": "main.js"
+}
