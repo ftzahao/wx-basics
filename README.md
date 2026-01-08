@@ -1,7 +1,8 @@
 # wx-basics
 
-- wx-json
-- wx-snippets
-- wxml-basics
-- wxs
-- wxss
+- [x] wx-json
+- [x] wx-snippets
+- [x] wxml-basics
+- [x] wxs
+- [x] wxss
+- [ ] wxml-language-features
